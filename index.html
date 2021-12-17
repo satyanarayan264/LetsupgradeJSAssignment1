@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>
+
+        First DOM Project
+
+      </title>  
+    </head>
+    <body>
+Name : <input type="text" value="Satya">
+<button> Greet Me </button>
+<div id="message"></div> 
+<script>   
+
+// Get Time
+
+function greetMsg(){
+    date = new Date()
+    hour=date.getHours()
+    if (hour <12){
+        return "Good Morning"
+    }
+    else if (hour>=12 && hour <=17){
+        return "Good Afternoon"
+    }
+    else {
+        return "Good Evening"
+    }
+
+}
+
+
+inp = document.querySelector ("input")
+button = document.querySelector ("button")
+message = document.querySelector("#message")
+button.addEventListener("click",sayHello)
+function sayHello(){
+    message.innerText="Hey "+inp.value + " " + greetMsg()
+}
+</script>         
+    </body>
+</html>
